@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccess
+namespace Migrations
 {
-    public class Access
+    class Program
     {
+        static void Main(string[] args)
+        {
+        }
     }
 }

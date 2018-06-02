@@ -1,0 +1,4 @@
+CREATE TABLE Characters(
+Id INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+Name NVarchar(50)
+)
