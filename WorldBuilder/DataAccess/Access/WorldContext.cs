@@ -1,10 +1,11 @@
 ﻿using DataAccess.Models;
 using DataAccess.Models.Characteristics;
+using Microsoft.AspNet.Identity.EntityFramework;
 using System.Data.Entity;
 
 namespace DataAccess.Access
 {
-    public class WorldContext : DbContext
+    public class WorldContext : IdentityDbContext<User>
     {
         public WorldContext(): base("name=WorldBuilderConnectionString") {}
 
