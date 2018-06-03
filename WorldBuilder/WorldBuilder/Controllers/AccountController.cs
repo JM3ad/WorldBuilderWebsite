@@ -2,9 +2,6 @@
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
@@ -20,6 +17,17 @@ namespace WorldBuilder.Controllers
             return View();
         }
 
+        public ActionResult Login()
+        {
+            return View();
+        }
+
+        public ActionResult Register()
+        {
+            return View();
+        }
+
+        [HttpPost]
         public ActionResult Login(LoginViewModel model)
         {
             var userManager = HttpContext.GetOwinContext().GetUserManager<AppUserManager>();
@@ -37,17 +45,19 @@ namespace WorldBuilder.Controllers
             return Redirect(Url.Action("Index", "Home"));
         }
 
+        [HttpPost]
         public async Task<ActionResult> Register(LoginViewModel model)
         {
             var userManager = HttpContext.GetOwinContext().GetUserManager<AppUserManager>();
             var result = await userManager.CreateAsync(new User {UserName = model.Username}, model.Password);
             if (result.Succeeded)
             {
-                return Redirect(Url.Action("Index", "Home"));
+                return Login(model);
             }
             return Redirect(Url.Action("Index", "Account"));
         }
 
+        [HttpPost]
         public ActionResult Logout()
         {
             var authManager = HttpContext.GetOwinContext().Authentication;

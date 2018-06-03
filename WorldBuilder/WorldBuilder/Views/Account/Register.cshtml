@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Account";
+}
+@model WorldBuilder.Models.LoginViewModel
+
+<div class="jumbotron">
+    <h1>Register here</h1>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+    </div>
+    <div class="col-md-4">
+        @using (Html.BeginForm("Register", "Account"))
+        {
+            @Html.TextBoxFor(model => model.Username)
+            <br />
+            @Html.TextBoxFor(model => model.Password)
+            <input type="submit" value="Register" />
+        }
+    </div>
+    <div class="col-md-4">
+    </div>
+</div>

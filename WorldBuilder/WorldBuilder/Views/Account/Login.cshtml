@@ -4,28 +4,21 @@
 @model WorldBuilder.Models.LoginViewModel
 
 <div class="jumbotron">
-    <h1>Log in or register here</h1>
+    <h1>Log in here</h1>
 </div>
 
 <div class="row">
     <div class="col-md-4">
     </div>
     <div class="col-md-4">
-        <h1>Login form here</h1>
         @using (Html.BeginForm("Login","Account"))
         {
             @Html.TextBoxFor(model => model.Username)
+            <br />
             @Html.TextBoxFor(model => model.Password)
             <input type="submit" value="Log In"/>
         }
     </div>
     <div class="col-md-4">
-        <h1>Login form here</h1>
-        @using (Html.BeginForm("Register", "Account"))
-    {
-        @Html.TextBoxFor(model => model.Username)
-        @Html.TextBoxFor(model => model.Password)
-        <input type="submit" value="Register" />
-}
     </div>
 </div>
