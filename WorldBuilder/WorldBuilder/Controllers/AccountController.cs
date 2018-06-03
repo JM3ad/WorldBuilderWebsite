@@ -64,7 +64,6 @@ namespace WorldBuilder.Controllers
             return Redirect(Url.Action("Index", "Account"));
         }
 
-        [HttpPost]
         public ActionResult Logout()
         {
             var authManager = HttpContext.GetOwinContext().Authentication;
