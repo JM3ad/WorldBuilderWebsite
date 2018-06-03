@@ -27,6 +27,12 @@ namespace WorldBuilder.Controllers
             return View();
         }
 
+        [Authorize(Roles = "Admin")]
+        public ActionResult AdminPage()
+        {
+            return View();
+        }
+
         [HttpPost]
         public ActionResult Login(LoginViewModel model)
         {
@@ -49,7 +55,8 @@ namespace WorldBuilder.Controllers
         public async Task<ActionResult> Register(LoginViewModel model)
         {
             var userManager = HttpContext.GetOwinContext().GetUserManager<AppUserManager>();
-            var result = await userManager.CreateAsync(new User {UserName = model.Username}, model.Password);
+            var user = new User { UserName = model.Username };
+            var result = await userManager.CreateAsync(user, model.Password);
             if (result.Succeeded)
             {
                 return Login(model);

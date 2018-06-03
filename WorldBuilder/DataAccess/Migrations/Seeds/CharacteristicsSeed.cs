@@ -4,7 +4,7 @@ using System.Data.Entity.Migrations;
 
 namespace DataAccess.Migrations.Seeds
 {
-    public static class CharacteristicsSeeding
+    public static class CharacteristicsSeed
     {
         public static void Run(WorldContext context)
         {

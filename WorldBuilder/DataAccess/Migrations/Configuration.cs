@@ -13,7 +13,8 @@ namespace DataAccess.Migrations
 
         protected override void Seed(WorldContext context)
         {
-            CharacteristicsSeeding.Run(context);
+            CharacteristicsSeed.Run(context);
+            AdminRoleSeed.Run(context);
         }
     }
 }

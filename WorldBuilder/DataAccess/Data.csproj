@@ -91,7 +91,8 @@
       <DependentUpon>201806022158591_Add-User-Accounts.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Migrations\Seeds\CharacteristicsSeeding.cs" />
+    <Compile Include="Migrations\Seeds\AdminRoleSeed.cs" />
+    <Compile Include="Migrations\Seeds\CharacteristicsSeed.cs" />
     <Compile Include="Models\Character.cs" />
     <Compile Include="Models\Characteristics\Gender.cs" />
     <Compile Include="Models\Characteristics\Race.cs" />
