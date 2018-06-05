@@ -178,8 +178,10 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\HistoryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\MapController.cs" />
+    <Compile Include="Controllers\PeoplesController.cs" />
+    <Compile Include="Controllers\WorldController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -191,7 +193,8 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\home.css" />
-    <Content Include="Content\Images\darkness.png" />
+    <Content Include="Content\Images\desert-banner-cropped.jpg" />
+    <Content Include="Content\Images\desert-banner.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -232,10 +235,12 @@
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Account\AdminPage.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
-    <Content Include="Views\Map\Index.cshtml" />
+    <Content Include="Views\World\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\History\" />
+    <Folder Include="Views\Peoples\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

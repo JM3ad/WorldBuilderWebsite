@@ -5,7 +5,14 @@
 <div id="title">
     <h1>Dustvale</h1>
     <p class="lead">The Great Dunes welcome all adventurers</p>
-    <br/>
-    <br/>
-    @Html.ActionLink("Register to learn more", "Register", "Account", null, new { @class = "btn btn-default" })
+    <br />
+    <br />
+    @if (Request.IsAuthenticated)
+    {
+        @Html.ActionLink("Enter to learn more", "Index", "World", null, new { @class = "btn btn-default" })
+    }
+    else
+    {
+        @Html.ActionLink("Register to learn more", "Register", "Account", null, new { @class = "btn btn-default" })
+    }
 </div>
