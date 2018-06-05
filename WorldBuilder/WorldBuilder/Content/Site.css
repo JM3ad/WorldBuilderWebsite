@@ -1,12 +1,27 @@
 ﻿body {
+    background: linear-gradient(to right, rgb(0,0,20), rgb(0,0,35), rgb(0,0,15), rgb(0,0,0));
+    color: white;
     padding-top: 50px;
     padding-bottom: 20px;
 }
 
 /* Set padding to keep content from hitting the edges */
-.body-content {
+.body-content, footer {
     padding-left: 15px;
     padding-right: 15px;
+}
+
+.main-content{
+    padding-top: 75px;
+}
+
+.main-content p{
+    font-size: 18px;
+}
+
+footer{
+    border-top: thin;
+    border-color: white;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -21,4 +36,21 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+
+.navbar {
+    background: none;
+    border: none;
+}
+
+.navbar-brand{
+    font-size: 25px;
+}
+
+.nav{
+    font-size: 18px;
+}
+
+h1, h2, h3{
+    text-align: center;
 }

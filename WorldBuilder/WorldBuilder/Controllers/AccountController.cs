@@ -27,12 +27,6 @@ namespace WorldBuilder.Controllers
             return View();
         }
 
-        [Authorize(Roles = "Admin")]
-        public ActionResult AdminPage()
-        {
-            return View();
-        }
-
         [HttpPost]
         public ActionResult Login(LoginViewModel model)
         {

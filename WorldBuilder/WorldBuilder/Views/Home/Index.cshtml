@@ -2,26 +2,10 @@
     ViewBag.Title = "Home";
 }
 
-<div class="jumbotron">
-    <h1>World Builder</h1>
-    <p class="lead">World Builder is my latest project designed to develop the immersive experience of a D&D campaign.</p>
-</div>
-
-<div class="row">
-    <div class="col-md-4">
-        <h2>Welcome</h2>
-        <p>
-            Coming Soon.
-        </p>
-    </div>
-    <div class="col-md-4">
-        <h2>See the characters</h2>
-        <p>Coming soon</p>
-        <p><a class="btn btn-default" href="">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Lore</h2>
-        <p>Coming soon.</p>
-        <p><a class="btn btn-default" href="">Learn more &raquo;</a></p>
-    </div>
+<div id="title">
+    <h1>Dustvale</h1>
+    <p class="lead">The Great Dunes welcome all adventurers</p>
+    <br/>
+    <br/>
+    @Html.ActionLink("Register to learn more", "Register", "Account", null, new { @class = "btn btn-default" })
 </div>
