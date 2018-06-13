@@ -12,6 +12,9 @@ namespace DataAccess.Access
         IEnumerable<Race> GetRaces();
         IEnumerable<Gender> GetGenders();
         IEnumerable<Character> GetCharacters();
+        Gender GetGender(int id);
+        Race GetRace(int id);
+        Character GetCharacter(int id);
     }
 
     public class WorldContext : IdentityDbContext<User>, IMyDbContext
@@ -35,6 +38,21 @@ namespace DataAccess.Access
         public IEnumerable<Character> GetCharacters()
         {
             return Characters;
+        }
+
+        public Race GetRace(int id)
+        {
+            return Races.Find(id);
+        }
+
+        public Gender GetGender(int id)
+        {
+            return Genders.Find(id);
+        }
+
+        public Character GetCharacter(int id)
+        {
+            return Characters.Find(id);
         }
 
         public void AddCharacter(Character character)

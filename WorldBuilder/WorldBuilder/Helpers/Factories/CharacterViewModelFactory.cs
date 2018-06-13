@@ -36,8 +36,8 @@ namespace WorldBuilder.Helpers.Factories
             var character = new Character
             {
                 Name = viewModel.Name,
-                Gender = context.Genders.Find(int.Parse(viewModel.Gender)),
-                Race = context.Races.Find(int.Parse(viewModel.Race))
+                Gender = context.GetGender(int.Parse(viewModel.Gender)),
+                Race = context.GetRace(int.Parse(viewModel.Race))
             };
             context.AddCharacter(character);
         }
