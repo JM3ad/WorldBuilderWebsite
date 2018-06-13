@@ -1,0 +1,38 @@
+﻿@model WorldBuilder.ViewModels.CharacterViewModel
+@{
+    ViewBag.Title = "Characters";
+}
+
+@Html.Partial("_AdminNavBar")
+<div id="title">
+    <h2>Here you can create characters</h2>
+</div>
+
+@using (Html.BeginForm("CreateCharacter", "Character", FormMethod.Post))
+{
+    <fieldset>
+        <legend>Character</legend>
+
+        <div class="name-label">
+            @Html.LabelFor(model => model.Name)
+        </div>
+        <div class="name-field">
+            @Html.TextBoxFor(model => model.Name)
+        </div>
+
+        <div class="race-label">
+            @Html.LabelFor(model => model.Race)
+        </div>
+        <div class="race-field">
+            @Html.DropDownListFor(model => model.Race, Model.AvailableRaces)
+        </div>
+
+        <div class="gender-label">
+            @Html.LabelFor(model => model.Gender)
+        </div>
+        <div class="gender-field">
+            @Html.DropDownListFor(model => model.Gender, Model.AvailableGenders)
+        </div>
+    </fieldset>
+    <input type="submit" value="Save" />
+}

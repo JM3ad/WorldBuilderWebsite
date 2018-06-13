@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Models.Characteristics
 {
-    public class Race : DBEnum
+    public interface DBEnum
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
+        int Id { get; set; }
+        string Name { get; set; }
     }
 }

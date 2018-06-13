@@ -8,28 +8,7 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    @if (Request.IsAuthenticated)
-                    {
-                        <li>@Html.ActionLink("World", "Index", "World")</li>
-                        <li>@Html.ActionLink("History", "Index", "History")</li>
-                        <li>@Html.ActionLink("Peoples", "Index", "Peoples")</li>
-                    }
-                    @if (User.IsInRole("Admin"))
-                    {
-                        <li>@Html.ActionLink("Admin", "Index", "Admin")</li>
-
-                    }
-                </ul>
-                @Html.Partial("_LoginPartial")
-            </div>
-        </div>
-    </div>
+    @Html.Partial("_NavBar")
     <div class="container body-content">
         @RenderBody()
     </div>

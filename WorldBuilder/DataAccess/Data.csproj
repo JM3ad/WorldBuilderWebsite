@@ -95,6 +95,7 @@
     <Compile Include="Migrations\Seeds\CharacteristicsSeed.cs" />
     <Compile Include="Models\Character.cs" />
     <Compile Include="Models\Characteristics\Gender.cs" />
+    <Compile Include="Models\Characteristics\DBEnum.cs" />
     <Compile Include="Models\Characteristics\Race.cs" />
     <Compile Include="Roles\AppRole.cs" />
     <Compile Include="Models\User.cs" />
