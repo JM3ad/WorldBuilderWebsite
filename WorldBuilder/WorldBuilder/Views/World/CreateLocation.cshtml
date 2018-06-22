@@ -1,0 +1,30 @@
+﻿@model WorldBuilder.ViewModels.LocationViewModel
+@{
+    ViewBag.Title = "Location Creation";
+}
+
+<div id="title">
+    <h2>Here you can create locations</h2>
+</div>
+
+@using (Html.BeginForm("CreateLocation", "World", FormMethod.Post))
+{
+<fieldset>
+    <legend>Location</legend>
+
+    <div class="name-label">
+        @Html.LabelFor(model => model.Name)
+    </div>
+    <div class="name-field">
+        @Html.TextBoxFor(model => model.Name)
+    </div>
+
+    <div class="name-label">
+        @Html.LabelFor(model => model.Description)
+    </div>
+    <div class="name-field">
+        @Html.TextBoxFor(model => model.Description)
+    </div>
+</fieldset>
+    <input type="submit" value="Save" />
+}

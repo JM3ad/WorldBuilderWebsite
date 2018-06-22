@@ -14,6 +14,7 @@ namespace WorldBuilder.Ninject
         {
             Bind<IMyDbContext>().To<WorldContext>();
             Bind<ICharacterFactory>().To<CharacterViewModelFactory>();
+            Bind<ILocationFactory>().To<LocationViewModelFactory>();
         }
     }
 }
