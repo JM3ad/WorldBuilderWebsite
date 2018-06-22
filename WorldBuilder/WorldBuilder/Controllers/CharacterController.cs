@@ -25,5 +25,11 @@ namespace WorldBuilder.Controllers
             characterFactory.SaveCharacter(viewModel);
             return Redirect("Index");
         }
+
+        public ActionResult CharacterProfile(int id)
+        {
+            var viewModel = characterFactory.GetCharacter(id);
+            return View(viewModel);
+        }
     }
 }

@@ -9,7 +9,7 @@ namespace DataAccess.Models
         public int Id { get; set; }
 
         public string Name { get; set; }
-        public Gender Gender { get; set; }
-        public Race Race { get; set; }
+        public virtual Gender Gender { get; set; }
+        public virtual Race Race { get; set; }
     }
 }

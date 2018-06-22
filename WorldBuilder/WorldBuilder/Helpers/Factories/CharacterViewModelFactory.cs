@@ -1,8 +1,6 @@
 ﻿using DataAccess.Access;
 using DataAccess.Models;
-using DataAccess.Models.Characteristics;
 using System.Linq;
-using System.Web.Mvc;
 using WorldBuilder.ViewModels;
 
 namespace WorldBuilder.Helpers.Factories
@@ -11,6 +9,7 @@ namespace WorldBuilder.Helpers.Factories
     {
         CharacterViewModel CreateCharacterViewModel();
         void SaveCharacter(CharacterViewModel viewModel);
+        CharacterViewModel GetCharacter(int id);
     }
 
     public class CharacterViewModelFactory : ICharacterFactory
@@ -40,6 +39,12 @@ namespace WorldBuilder.Helpers.Factories
                 Race = context.GetRace(int.Parse(viewModel.Race))
             };
             context.AddCharacter(character);
+        }
+
+        public CharacterViewModel GetCharacter(int id)
+        {
+            var character = context.GetCharacter(id);
+            return new CharacterViewModel(character);
         }
     }
 }
