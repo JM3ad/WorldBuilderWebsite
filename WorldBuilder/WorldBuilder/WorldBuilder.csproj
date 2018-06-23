@@ -214,9 +214,9 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\world.css" />
     <Content Include="Content\home.css" />
-    <Content Include="Content\Images\desert-banner-cropped.jpg" />
-    <Content Include="Content\Images\desert-banner.jpg" />
+    <Content Include="Content\Images\DustValeMap.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
