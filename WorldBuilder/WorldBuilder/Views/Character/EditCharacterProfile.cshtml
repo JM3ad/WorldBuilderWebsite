@@ -1,0 +1,56 @@
+﻿@model WorldBuilder.ViewModels.CharacterViewModel
+@{
+    ViewBag.Title = "Character Profile";
+}
+
+@using (Html.BeginForm("EditCharacter", "Character", FormMethod.Post))
+{
+    <fieldset>
+        <div class="container">
+            @Html.Hidden("Id")
+            <div id="title">
+                @Html.TextBoxFor(model => model.Name)
+                <input type="submit" value="Save" />
+            </div>
+            <div class="character-display">
+                <div class="notes col-md-7">
+                    TODO give character description so this can be edited.
+
+                </div>
+                <div class="details col-md-5">
+                    <div class="characteristics">
+                        <div class="race-label">
+                            @Html.LabelFor(model => model.Race)
+                        </div>
+                        <div class="race-field">
+                            @Html.DropDownListFor(model => model.Race, Model.AvailableRaces)
+                        </div>
+
+                        <div class="gender-label">
+                            @Html.LabelFor(model => model.Gender)
+                        </div>
+                        <div class="gender-field">
+                            @Html.DropDownListFor(model => model.Gender, Model.AvailableGenders)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+
+}
+
+@using (Html.BeginForm("CreateCharacter", "Character", FormMethod.Post))
+{
+
+    <legend>Character</legend>
+
+    <div class="name-label">
+        @Html.LabelFor(model => model.Name)
+    </div>
+    <div class="name-field">
+        @Html.TextBoxFor(model => model.Name)
+    </div>
+
+    
+}

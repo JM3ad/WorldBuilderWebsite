@@ -24,5 +24,11 @@ namespace WorldBuilder.ViewModels
             Gender = character.Gender.ToString();
             Race = character.Race.ToString();
         }
+
+        public CharacterViewModel(Character character, IEnumerable<SelectListItem> availableGenders, IEnumerable<SelectListItem> availableRaces) : this(character)
+        {
+            AvailableGenders = availableGenders;
+            AvailableRaces = availableRaces;
+        }
     }
 }

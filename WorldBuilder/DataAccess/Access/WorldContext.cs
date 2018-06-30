@@ -10,6 +10,7 @@ namespace DataAccess.Access
     public interface IMyDbContext
     {
         void AddCharacter(Character character);
+        void UpdateCharacter(Character character);
         void AddLocation(Location location);
         IEnumerable<Race> GetRaces();
         IEnumerable<Gender> GetGenders();
@@ -80,6 +81,13 @@ namespace DataAccess.Access
         public void AddLocation(Location location)
         {
             Locations.Add(location);
+            SaveChanges();
+        }
+
+        public void UpdateCharacter(Character character)
+        {
+            var charToUpdate = Characters.Find(character.Id);
+            Entry(charToUpdate).CurrentValues.SetValues(character);
             SaveChanges();
         }
     }

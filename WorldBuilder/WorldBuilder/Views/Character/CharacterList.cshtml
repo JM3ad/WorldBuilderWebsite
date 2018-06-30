@@ -1,0 +1,16 @@
+﻿@model WorldBuilder.ViewModels.CharacterListViewModel
+@{
+    ViewBag.Title = "All Characters";
+}
+
+<div class="container">
+    <div id="title">
+        <h2>Characters:</h2>
+    </div>
+    <ul>
+        @foreach (var character in Model.Characters)
+        {
+            <li>@Html.ActionLink(character.Name, "CharacterProfile", "Character", new { id = character.Id }, null)</li>
+        }
+    </ul>
+</div>
