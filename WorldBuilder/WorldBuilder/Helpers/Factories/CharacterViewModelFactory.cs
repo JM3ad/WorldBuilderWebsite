@@ -40,24 +40,13 @@ namespace WorldBuilder.Helpers.Factories
 
         public void CreateCharacter(CharacterViewModel viewModel)
         {
-            var character = new Character
-            {
-                Name = viewModel.Name,
-                Gender = context.GetGender(int.Parse(viewModel.Gender)),
-                Race = context.GetRace(int.Parse(viewModel.Race))
-            };
+            var character = GetCharacterFromModel(viewModel);
             context.AddCharacter(character);
         }
 
         public void UpdateCharacter(CharacterViewModel viewModel)
         {
-            var character = new Character
-            {
-                Id = viewModel.Id,
-                Name = viewModel.Name,
-                Gender = context.GetGender(int.Parse(viewModel.Gender)),
-                Race = context.GetRace(int.Parse(viewModel.Race))
-            };
+            var character = GetCharacterFromModel(viewModel);
             context.UpdateCharacter(character);
         }
 
@@ -71,6 +60,18 @@ namespace WorldBuilder.Helpers.Factories
         {
             var characters = context.GetCharacters();
             return new CharacterListViewModel(characters.ToList().Select(x => new CharacterViewModel(x)));
+        }
+
+        private Character GetCharacterFromModel(CharacterViewModel viewModel)
+        {
+            return new Character
+            {
+                Id = viewModel.Id,
+                Name = viewModel.Name,
+                Description = viewModel.Description,
+                Gender = context.GetGender(int.Parse(viewModel.Gender)),
+                Race = context.GetRace(int.Parse(viewModel.Race))
+            };
         }
     }
 }

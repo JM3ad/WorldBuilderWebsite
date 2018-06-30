@@ -9,6 +9,7 @@ namespace WorldBuilder.ViewModels
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public string Description { get; set; }
         public string Gender { get; set; }
         public string Race { get; set; }
 
@@ -21,6 +22,7 @@ namespace WorldBuilder.ViewModels
         {
             Id = character.Id;
             Name = character.Name;
+            Description = character.Description;
             Gender = character.Gender.ToString();
             Race = character.Race.ToString();
         }

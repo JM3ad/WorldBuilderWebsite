@@ -64,3 +64,9 @@ h1, h2, h3{
     max-height: 300px;
     overflow: hidden;
 }
+
+#Description{
+    width: 100%;
+    min-height: 350px;
+    text-wrap: normal;
+}

@@ -94,6 +94,10 @@
     <Compile Include="Migrations\201806222013538_AddLocations.Designer.cs">
       <DependentUpon>201806222013538_AddLocations.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806301711152_AddCharacterDescription.cs" />
+    <Compile Include="Migrations\201806301711152_AddCharacterDescription.Designer.cs">
+      <DependentUpon>201806301711152_AddCharacterDescription.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Migrations\Seeds\AdminRoleSeed.cs" />
     <Compile Include="Migrations\Seeds\CharacteristicsSeed.cs" />
@@ -123,6 +127,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806222013538_AddLocations.resx">
       <DependentUpon>201806222013538_AddLocations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806301711152_AddCharacterDescription.resx">
+      <DependentUpon>201806301711152_AddCharacterDescription.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
