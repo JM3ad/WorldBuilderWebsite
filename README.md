@@ -6,6 +6,7 @@ The hope of this project is to provide a wiki-like website that allows a DM to o
 ## Zero To Hero:
 ### Migrations:
 Add a migration using:      "Add-Migration <migration_name> -Project Data"
+
 Run the migrations using:   "Update-Database -Project Data"
 
 ## To do:
