@@ -2,8 +2,22 @@
 @{
     ViewBag.Title = "Character Profile";
 }
+<div class="container">
+    <div id="title">
+        <h2>@Model.Name</h2>
+    </div>
+    <div class="character-display">
+        <div class="notes col-md-7">
+            @Model.Name has an exciting backstory that will eventually appear here.....
+            @Model.Name has an exciting backstory that will eventually appear here.....
+            @Model.Name has an exciting backstory that will eventually appear here.....
+            @Model.Name has an exciting backstory that will eventually appear here.....
+            @Model.Name has an exciting backstory that will eventually appear here.....
+            @Model.Name has an exciting backstory that will eventually appear here.....
 
-@Html.Partial("_AdminNavBar")
-<div id="title">
-    <h2>Here you can see character @Model.Name</h2>
+        </div>
+        <div class="details col-md-5">
+            @Html.Partial("_CharacterDetails")
+        </div>
+    </div>
 </div>

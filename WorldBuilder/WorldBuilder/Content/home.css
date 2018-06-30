@@ -1,8 +1,13 @@
-﻿#title {
+﻿#homepage-title {
     text-align: center;
-    padding-top: 150px;
+    padding-top: 200px;
 }
 
 #title h1 {
-    font-size: 44px;
+    font-size: 64px;
+}
+
+.home-page-container{
+    background-image: url("Images/Dunes.jpg");
+    min-height: 650px;
 }

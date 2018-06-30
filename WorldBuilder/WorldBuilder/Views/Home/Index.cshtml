@@ -2,17 +2,21 @@
     ViewBag.Title = "Home";
 }
 
-<div id="title">
-    <h1>Dustvale</h1>
-    <p class="lead">The Great Dunes welcome all adventurers</p>
-    <br />
-    <br />
-    @if (Request.IsAuthenticated)
-    {
-        @Html.ActionLink("Enter to learn more", "Index", "World", null, new { @class = "btn btn-default" })
-    }
-    else
-    {
-        @Html.ActionLink("Register to learn more", "Register", "Account", null, new { @class = "btn btn-default" })
-    }
+<div class="home-page-container">
+    <div id="homepage-title">
+        <h1>Dustvale</h1>
+        <br />
+        <br />
+        <p class="lead">The Great Dunes welcome all adventurers</p>
+        <br />
+        <br />
+        @if (Request.IsAuthenticated)
+        {
+            @Html.ActionLink("Enter to learn more", "Index", "World", null, new { @class = "btn btn-default" })
+        }
+        else
+        {
+            @Html.ActionLink("Register to learn more", "Register", "Account", null, new { @class = "btn btn-default" })
+        }
+    </div>
 </div>

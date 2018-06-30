@@ -214,6 +214,10 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\Dunes.jpg" />
+    <Content Include="Content\Images\HeroImageResized.jpg" />
+    <Content Include="Content\Images\Lake.jpg" />
+    <Content Include="Content\Images\PlaceholderCharacter.jpg" />
     <Content Include="Content\world.css" />
     <Content Include="Content\home.css" />
     <Content Include="Content\Images\DustValeMap.jpg" />
@@ -266,6 +270,8 @@
     <Content Include="Views\Peoples\Index.cshtml" />
     <Content Include="Views\World\Location.cshtml" />
     <Content Include="Views\World\CreateLocation.cshtml" />
+    <Content Include="Views\Shared\_Footer.cshtml" />
+    <Content Include="Views\Character\_CharacterDetails.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

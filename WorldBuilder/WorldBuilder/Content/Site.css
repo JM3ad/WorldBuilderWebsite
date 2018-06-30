@@ -1,8 +1,7 @@
 ﻿body {
     background: linear-gradient(to right, rgb(0,0,20), rgb(0,0,35), rgb(0,0,15), rgb(0,0,0));
     color: white;
-    padding-top: 50px;
-    padding-bottom: 20px;
+    padding-top: 40px;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -19,9 +18,9 @@
     font-size: 18px;
 }
 
-footer{
-    border-top: thin;
-    border-color: white;
+footer {
+    background: black;
+    min-height: 100px;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -43,14 +42,25 @@ textarea {
     border: none;
 }
 
-.navbar-brand{
-    font-size: 25px;
-}
-
 .nav{
     font-size: 18px;
 }
 
 h1, h2, h3{
     text-align: center;
+}
+
+#title {
+    text-align: center;
+    padding-top: 100px;
+}
+
+.character-details {
+
+}
+
+.header-image{
+    width: 100%;
+    max-height: 300px;
+    overflow: hidden;
 }
