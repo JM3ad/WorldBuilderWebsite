@@ -20,17 +20,17 @@
                 <div class="details col-md-5">
                     <div class="characteristics">
                         <div class="race-label">
-                            @Html.LabelFor(model => model.Race)
+                            @Html.LabelFor(model => model.RaceId)
                         </div>
                         <div class="race-field">
-                            @Html.DropDownListFor(model => model.Race, Model.AvailableRaces)
+                            @Html.DropDownListFor(model => model.RaceId, Model.AvailableRaces)
                         </div>
 
                         <div class="gender-label">
-                            @Html.LabelFor(model => model.Gender)
+                            @Html.LabelFor(model => model.GenderId)
                         </div>
                         <div class="gender-field">
-                            @Html.DropDownListFor(model => model.Gender, Model.AvailableGenders)
+                            @Html.DropDownListFor(model => model.GenderId, Model.AvailableGenders)
                         </div>
                     </div>
                 </div>

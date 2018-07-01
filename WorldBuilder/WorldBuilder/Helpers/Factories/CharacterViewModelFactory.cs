@@ -69,8 +69,8 @@ namespace WorldBuilder.Helpers.Factories
                 Id = viewModel.Id,
                 Name = viewModel.Name,
                 Description = viewModel.Description,
-                Gender = context.GetGender(int.Parse(viewModel.Gender)),
-                Race = context.GetRace(int.Parse(viewModel.Race))
+                Gender = context.GetGender(int.Parse(viewModel.GenderId)),
+                Race = context.GetRace(int.Parse(viewModel.RaceId))
             };
         }
     }

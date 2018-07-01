@@ -88,6 +88,8 @@ namespace DataAccess.Access
         {
             var charToUpdate = Characters.Find(character.Id);
             Entry(charToUpdate).CurrentValues.SetValues(character);
+            charToUpdate.Gender = character.Gender;
+            charToUpdate.Race = character.Race;
             SaveChanges();
         }
     }

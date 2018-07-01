@@ -2,6 +2,7 @@
 
 <img src="~/Content/Images/PlaceholderCharacter.jpg" />
 <div class="characteristics">
-    Gender: @Model.Gender
-    Race: @Model.Race
+    Gender: @Model.AvailableGenders.First(g => g.Value == Model.GenderId).Text
+    <br/>
+    Race: @Model.AvailableRaces.First(r => r.Value == Model.RaceId).Text
 </div>
